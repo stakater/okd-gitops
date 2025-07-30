@@ -5,10 +5,11 @@ kind: Kustomization
 generatorOptions:
   disableNameSuffixHash: true
 
-patchesStrategicMerge:
-- default-sa-pull-secret-patch.yaml
-
 # list of Resource Config to be Applied
 resources:
-  - pull-secret.yaml
-  - serviceaccount.yaml
+  - namespace.yaml
+  - prereqs
+  - prereqs-marketplace
+  - applied-operator-marketplace
+  - applied-operator
+  - applied-mch
