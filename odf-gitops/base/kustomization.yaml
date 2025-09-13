@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- odf-resources
+- odf-catalogsource.yaml
+
+configurations:
+- kustomizeconfig.yaml
+
+# replace catalogsource image
+#images:
+#- name: catalog-img
+#  newName: quay.io/okderators/catalog-index
+#  newTag: 4.19
